@@ -366,5 +366,88 @@ Esses comandos ajudam a **controlar, depurar e organizar** seus containers no di
 
 
 
+Aqui está uma versão **curta, clara e no mesmo estilo do slide** que você mostrou:
 
+---
 
+### 🐳 O que são imagens?
+
+* **Imagens são arquivos que programamos** (via *Dockerfile*) para que o Docker saiba **como montar e executar** uma aplicação dentro de um container;
+* Elas possuem informações como: **imagem base**, **diretório inicial**, **dependências**, **comandos de inicialização**, **portas** e outras configurações;
+* Quando um container é criado a partir da imagem, **todas essas instruções são executadas em camadas**, tornando o processo leve, rápido e reutilizável.
+
+Aqui está um **texto simples, direto e didático**, perfeito para explicar em aula **como criar um Dockerfile**, incluindo um **exemplo comentado**:
+
+---
+
+### 🐳 Exemplo prático de criação de um Dockerfile
+
+Para criar um Dockerfile, começamos definindo tudo o que a nossa aplicação precisa para funcionar dentro do container. Vamos usar como exemplo uma aplicação Node.js.
+
+1. **Criamos um arquivo chamado `Dockerfile`** na raiz do projeto.
+2. Dentro dele, escrevemos as instruções que o Docker deve seguir para montar a imagem.
+
+Veja um exemplo completo:
+
+```dockerfile
+# 1. Escolher a imagem base
+FROM node:18
+
+# 2. Definir o diretório de trabalho dentro do container
+WORKDIR /app
+
+# 3. Copiar os arquivos do projeto para dentro do container
+COPY . .
+
+# 4. Instalar dependências da aplicação
+RUN npm install
+
+# 5. Definir o comando que será executado quando o container iniciar
+CMD ["npm", "start"]
+```
+
+---
+
+### 🔍 Explicando o passo a passo
+
+* **FROM node:18**
+  Diz qual imagem base será usada. Neste caso, uma imagem oficial do Node versão 18.
+
+* **WORKDIR /app**
+  Configura um diretório dentro do container onde o código da aplicação será colocado.
+
+* **COPY . .**
+  Copia todos os arquivos do projeto para o diretório `/app` dentro do container.
+
+* **RUN npm install**
+  Executa comandos durante a construção da imagem — aqui, instala as dependências.
+
+* **CMD ["npm", "start"]**
+  Define o comando que será rodado quando o container iniciar.
+  Esse é o comando final de execução da aplicação.
+
+---
+
+### 🛠️ Construindo a imagem
+
+Depois de criar o Dockerfile, rodamos:
+
+```bash
+docker build -t minha-api-node .
+```
+
+Isso cria uma imagem chamada **minha-api-node** usando o Dockerfile da pasta atual.
+
+---
+
+### 📦 Resultado
+
+Agora você pode rodar a aplicação dentro de um container com:
+
+```bash
+docker run -p 3000:3000 minha-api-node
+```
+
+---
+
+Se quiser, posso montar uma versão mais curta, mais visual ou transformada em slide.
