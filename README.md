@@ -373,8 +373,6 @@ Esses comandos ajudam a **controlar, depurar e organizar** seus containers no di
 * Elas possuem informações como: **imagem base**, **diretório inicial**, **dependências**, **comandos de inicialização**, **portas** e outras configurações;
 * Quando um container é criado a partir da imagem, **todas essas instruções são executadas em camadas**, tornando o processo leve, rápido e reutilizável.
 
-Aqui está um **texto simples, direto e didático**, perfeito para explicar em aula **como criar um Dockerfile**, incluindo um **exemplo comentado**:
-
 ---
 
 ### 🐳 Exemplo prático de criação de um Dockerfile
