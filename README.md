@@ -444,5 +444,3 @@ docker run -p 3000:3000 minha-api-node
 ```
 
 ---
-
-Se quiser, posso montar uma versão mais curta, mais visual ou transformada em slide.
