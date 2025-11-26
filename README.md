@@ -365,9 +365,6 @@ docker logs <nome-ou-id>
 Esses comandos ajudam a **controlar, depurar e organizar** seus containers no dia a dia.
 
 
-
-Aqui está uma versão **curta, clara e no mesmo estilo do slide** que você mostrou:
-
 ---
 
 ### 🐳 O que são imagens?
